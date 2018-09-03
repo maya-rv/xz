@@ -1,4 +1,3 @@
-# Create new .travis.yml
 script:
   - bash <(curl -s https://runtimeverification.com/toolkit/docker/bash) nightly
 
