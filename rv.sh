@@ -4,6 +4,9 @@ apt install -y automake autoconf libtool make autopoint
 
 autoreconf -fiv
 env CC=kcc LD=kcc CFLAGS="-std=gnu11 -fissue-report=./xz_errors_kcc.json" ./configure --enable-shared=no
+
+# Ignore errors from configure
+rm xz_errors_kcc.json
 make -j`nproc`
 
 timeout 10m make check
